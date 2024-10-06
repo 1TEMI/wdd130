@@ -21,6 +21,9 @@ main img {
     height: auto;
     float: right;
   }
+  aside h2 {
+    position: absolute;
+  }
   p{
     padding: 0;
   }
