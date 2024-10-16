@@ -4,6 +4,7 @@
     --secondary-color: #D6EDFF;
     --accent-1: #ACD7EC;
     --accent-2: #8B95C9;
+    --trasperent-primary: #000080c3;
     }
 
   h1, h2 {
@@ -17,7 +18,6 @@ a {
   /* Hero Section */
 .hero {
     position: relative;
-    text-align: center;
   }
   
   .hero img {
@@ -26,30 +26,16 @@ a {
     height: auto;
   }
   
-  .hero h1 {
+h1 {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 3rem;
-    background-color: #000080c3;
-    color: var(--secondary-color);
-    width: 100%;
-    /* padding: 1rem; */
   }
   
-  .hero article {
+  article {
     position: absolute;
-    bottom: 70px;
-    left: 200px;
-    background-color:#d6edffbd ;
-    padding: 1rem;
-    max-width: 70%;
   }
   
   .hero article img {
     float: right;
-    margin-left: 10px;
     width: 100px;
   }
 
