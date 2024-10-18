@@ -9,13 +9,13 @@
 
 header {
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-columns: 1fr 2fr 2fr 2fr;
     align-items: center;
-    padding: 10px;
+    padding: 0 160px 0 160px;
   }
   nav ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     list-style-type: none;
   }
 
@@ -29,6 +29,9 @@ header {
     text-align: center;
     color: var(--primary-color);
   }
+header .logo{
+  width: 200px;
+}
 
   #history {
     padding: 20px;
