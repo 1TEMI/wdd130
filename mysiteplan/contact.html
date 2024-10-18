@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ensign Tech & IT Solutions Enterprise | Home</title>
+    <link rel="stylesheet" href="./styles/contact.css" />
+    <link rel="stylesheet" href="./styles/utilities.css" />
+    <link rel="shortcut icon" href="./images/logfav.png" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- Home Section -->
+    <section id="home">
+      <div class="home">
+        <!-- Header Section -->
+        <header>
+          <!-- logo -->
+          <div class="logo">
+            <img src="./images/logfav-Copy.png" alt="" />
+          </div>
+          <!-- Nav links -->
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="product.html">Products & Services</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </nav>
+        </header>
+        <!--Home Background  -->
+        <div class="bg">
+          <img src="./images/tech.jpg" alt="" />
+        </div>
+        <!-- Home Title -->
+        <div class="home-msg">
+          <h1>ENSIGN TECH & IT SOLUTIONS ENT.</h1>
+          <h2>Digital technology guaranteed.</h2>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Us -->
+    <section id="contact">
+      <div class="contact">
+        <div class="contact-header">
+          <h2>CONTACT US</h2>
+        </div>
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <div class="contact-msg">
+            <p>
+              Thank you for visiting Ensign Tech. If you have any questions,
+              feedback, or suggestions, we'd love to hear from you. Please feel
+              free to reach out to us using the contact form or by emailing us
+              directly at
+              <a href="mailto:ensigntechsolutions@gmail.com"
+                >ensigntechsolutions@gmail.com</a
+              >
+              We'll get back to you as soon as possible. Your input is important
+              to us, and we appreciate your engagement with our site.
+            </p>
+          </div>
+          <form action="/my-handling-form-page" method="post" id="feedback">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="user_name" />
+            <label for="mail">E-mail:</label>
+            <input type="email" id="mail" name="user_email" />
+            <label for="msg">Message:</label>
+            <textarea
+              id="msg"
+              name="user_message"
+              cols="10"
+              rows="5"
+            ></textarea>
+            <div class="button">
+              <button class="btn" type="submit">Send your message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!--Footer Section  -->
+    <footer>
+      <h3>Ensign Tech & IT Solutions ENT &copy; 2023</h3>
+      <p><a href="./contact.html">Contact Us</a></p>
+      <p><a href="./site-plan.html">Site Plan</a></p>
+      <div class="social-links">
+        <a href="https://facebook.com" target="_blank">
+          <img src="images/facebook.png" alt="fb icon" />
+        </a>
+        <a href="https://twitter.com" target="_blank">
+          <img src="images/twitter.png" alt="twitter icon" />
+        </a>
+        <a href="https://instagram.com" target="_blank">
+          <img src="images/instagram.png" alt="instagram icon" />
+        </a>
+      </div>
+    </footer>
+    <script>
+      // get the feedback div element so we can do something with it.
+      const feedbackElement = document.getElementById("feedback");
+      // get the form so we can read what was entered in it.
+      const formElement = document.forms[0];
+      // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+      formElement.addEventListener("submit", function (e) {
+        // stop the form from doing the default action.
+        e.preventDefault();
+        // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+        feedbackElement.innerHTML =
+          "Hello " +
+          formElement.user_name.value +
+          "! Thank you for your message. We will get back with you as soon as possible!";
+        // make the feedback element visible.
+        feedbackElement.style.display = "block";
+        // add a class to move everything down so our message doesn't cover it.
+        document.body.classList.toggle("moveDown");
+      });
+    </script>
+  </body>
+</html>
